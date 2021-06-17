@@ -136,3 +136,6 @@ recipes/*
 
 # nohup logs
 *.out
+
+out
+out_commonvoice
