@@ -10,4 +10,6 @@ python commonvoice/analysis.py
 python commonvoice/create_wavs.py
 python TTS/bin/compute_statistics.py config_commonvoice.json scale_stats_common.npy --data_path media/mint/Barracuda/Datasets/CommonVoiceMozillaIta/cv-corpus-6.1-2020-12-11/it/wavs
 CUDA_VISIBLE_DEVICES="0" python TTS/bin/train_tacotron.py --config_path config_commonvoice.json | tee training.log
+# or start fine train from another model
+CUDA_VISIBLE_DEVICES="0" python TTS/bin/train_tacotron.py --config_path config_commonvoice.json --restore_path out_commonvoice/commonvoice_best-June-17-2021_10+16PM-1e2713f7/best_model.pth.tar | tee training.log 
 ```
