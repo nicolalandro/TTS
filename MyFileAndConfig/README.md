@@ -29,6 +29,8 @@ CUDA_VISIBLE_DEVICES="0" python TTS/bin/train_glow_tts.py --config_path config_c
 git checkout trainer-api
 python TTS/bin/compute_statistics.py MyFileAndConfig/config_maillabs_tacotron2.json scale_stats_maillabs.npy --data_path /media/mint/Barracuda/Datasets/MAIL_LABS_TTS/it_IT/by_book/male/riccardo_fasol/il_fu_mattia_pascal/wavs
 CUDA_VISIBLE_DEVICES="0" python TTS/bin/train_tts.py --config_path MyFileAndConfig/config_maillabs_tacotron2.json | tee training.log
+
+tts-server --model_path  out_maillabs/maillabs_best-June-29-2021_11+14AM-549708b2/best_model.pth.tar --config_path MyFileAndConfig/config_maillabs_tacotron2.json
 ```
 
 ## Train Guide for Vocoder
