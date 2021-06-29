@@ -139,4 +139,5 @@ recipes/*
 
 out
 out_commonvoice
+out_maillabs
 *.log
