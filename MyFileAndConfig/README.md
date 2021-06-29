@@ -1,7 +1,11 @@
 # train for ita voice
-Train on Commonvoice
+Ita dataset for TTS:
+* [Mozilla Common voice](https://commonvoice.mozilla.org/)
+* [The M-AILABS Speech Dataset](https://www.caito.de/2019/01/the-m-ailabs-speech-dataset/)
 
-## Train Guide
+## Train Guide for TTS model
+* Train tacotron2 from common voice, select voice with more data
+
 ```
 # download common voice
 python commonvoice/analysis.py
@@ -13,10 +17,15 @@ CUDA_VISIBLE_DEVICES="0" python TTS/bin/train_tacotron.py --config_path config_c
 # or start fine train from another model
 CUDA_VISIBLE_DEVICES="0" python TTS/bin/train_tacotron.py --config_path config_commonvoice_tactoron2.json --restore_path out_commonvoice/commonvoice_best-June-17-2021_10+16PM-1e2713f7/best_model.pth.tar | tee training.log 
 ```
-Train GlowTTS
+
+* Train GlowTTS on the same data
+
 ```
 CUDA_VISIBLE_DEVICES="0" python TTS/bin/train_glow_tts.py --config_path config_commonvoice_glow_tts.json | tee training.log
 ```
+
+## Train Guide for Vocoder
+TODO
 
 ## Run server and use trained model
 ```
