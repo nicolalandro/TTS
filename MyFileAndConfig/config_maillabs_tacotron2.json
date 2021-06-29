@@ -2,9 +2,9 @@
     "datasets": [
         {
             "name": "ljspeech",
-            "path": "/media/mint/Barracuda/Datasets/MAIL_LABS_TTS/it_IT/by_book/male/riccardo_fasol/il_fu_mattia_pascal",
-            "meta_file_train": "metadata.csv",
-            "meta_file_val": null
+            "path": "/media/mint/Barracuda/Datasets/MAIL_LABS_TTS/riccardo_fasol",
+            "meta_file_train": "train.csv",
+            "meta_file_val": "val.csv"
         }
     ],
     "audio": {
@@ -52,7 +52,7 @@
     "ga_alpha": 5.0,
     "stopnet_pos_weight": 15.0,
     "run_eval": true,
-    "test_delay_epochs": 10,
+    "test_delay_epochs": 0,
     "test_sentences_file": null,
     "noam_schedule": true,
     "grad_clip": 0.05,
