@@ -1,0 +1,49 @@
+{
+    "datasets": [
+        {
+            "name": "ljspeech",
+            "path": "/media/mint/Barracuda/Datasets/CommonVoiceMozillaIta/cv-corpus-6.1-2020-12-11/it/",
+            "meta_file_train": "voice_best_train.csv",
+            "meta_file_val": "voice_best_val.csv"
+        }
+    ],
+    "audio": {
+        "fft_size": 1024,
+        "win_length": 1024,
+        "hop_length": 256,
+        "frame_length_ms": null,
+        "frame_shift_ms": null,
+        "sample_rate": 44100,
+        "preemphasis": 0.0,
+        "ref_level_db": 20,
+        "do_trim_silence": true,
+        "trim_db": 60,
+        "power": 1.5,
+        "griffin_lim_iters": 60,
+        "num_mels": 80,
+        "mel_fmin": 50.0,
+        "mel_fmax": 7600.0,
+        "spec_gain": 1,
+        "signal_norm": true,
+        "min_level_db": -100,
+        "symmetric_norm": true,
+        "max_norm": 4.0,
+        "clip_norm": true,
+        "stats_path": "scale_stats_common.npy"
+    },
+    "gst":{
+        "gst_embedding_dim": 256,
+        "gst_num_heads": 4,
+        "gst_num_style_tokens": 10
+    },
+    "model": "glow_tts",
+    "run_name": "glow_tts",
+    "run_description": "test.",
+    "batch_size": 32,
+    "eval_batch_size": 8,
+    "num_loader_workers": 4,
+    "num_val_loader_workers": 2,
+    "text_cleaner": "phoneme_cleaners",
+    "output_path": "/media/mint/Barracuda/Models/TTS/out_commonvoice",
+    "phoneme_cache_path": "/media/mint/Barracuda/Models/TTS/out_commonvoice"
+}
