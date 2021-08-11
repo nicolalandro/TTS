@@ -258,7 +258,7 @@ class Synthesizer(object):
             if self.use_cuda and not use_gl:
                 waveform = waveform.cpu()
             if not use_gl:
-                waveform = waveform.numpy()
+                waveform = waveform.detach().numpy()
             waveform = waveform.squeeze()
 
             # trim silence

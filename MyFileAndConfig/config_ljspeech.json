@@ -29,7 +29,7 @@
         "symmetric_norm": true,
         "max_norm": 4.0,
         "clip_norm": true,
-        "stats_path": "scale_stats.npy"
+        "stats_path": "scale_stats_maillabs.npy"
     },
     "gst":{
         "gst_embedding_dim": 256,

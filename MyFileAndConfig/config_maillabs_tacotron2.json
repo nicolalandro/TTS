@@ -58,7 +58,7 @@
     "grad_clip": 0.05,
     "epochs": 1000,
     "lr": 0.001,
-    "wd": 1e-06,
+    "wd": 0,
     "warmup_steps": 4000,
     "memory_size": -1,
     "prenet_type": "original",

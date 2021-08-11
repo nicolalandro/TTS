@@ -1,0 +1,60 @@
+{
+    "datasets": [
+        {
+            "name": "ljspeech",
+            "path": "/media/mint/Barracuda/Datasets/MAIL_LABS_TTS/riccardo_fasol",
+            "meta_file_train": "train.csv",
+            "meta_file_val": "val.csv"
+        }
+    ],
+    "model": "glow_tts",
+    "run_name": "glow_tts-fasol",
+
+    "audio": {
+        "fft_size": 1024,
+        "win_length": 1024,
+        "hop_length": 256,
+        "frame_length_ms": null,
+        "frame_shift_ms": null,
+        "sample_rate": 16000,
+        "preemphasis": 0.0,
+        "ref_level_db": 20,
+        "do_trim_silence": true,
+        "trim_db": 60,
+        "power": 1.5,
+        "griffin_lim_iters": 60,
+        "num_mels": 80,
+        "mel_fmin": 50.0,
+        "mel_fmax": 7600.0,
+        "spec_gain": 1,
+        "signal_norm": true,
+        "min_level_db": -100,
+        "symmetric_norm": true,
+        "max_norm": 4.0,
+        "clip_norm": true,
+        "stats_path": "scale_stats_maillabs.npy"
+    },
+    "text_cleaner": "phoneme_cleaners",
+    
+    "epochs": 500,
+    "batch_size": 64,
+    "eval_batch_size": 16,
+    "lr": 0.001,
+    "wd": 1e-06,
+
+    "num_loader_workers": 4,
+    "num_eval_loader_workers": 4,
+    "run_eval": true,
+    "test_delay_epochs": -1,
+    "use_phonemes": false,
+    "phoneme_language": "it-it",
+    "phoneme_cache_path": "phoneme_cache",
+    "print_step": 25,
+    "print_eval": true,
+    "mixed_precision": false,
+    
+    "num_loader_workers": 4,
+    "output_path": "/media/mint/Barracuda/Models/TTS/out_maillabs",
+    "save_step": 1000,
+    "checkpoint": true
+}

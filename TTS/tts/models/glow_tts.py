@@ -11,6 +11,7 @@ from TTS.tts.utils.data import sequence_mask
 from TTS.tts.utils.measures import alignment_diagonal_score
 from TTS.tts.utils.visual import plot_alignment, plot_spectrogram
 from TTS.utils.audio import AudioProcessor
+from TTS.tts.models.abstract_tts import TTSModel
 
 
 class GlowTTS(TTSModel):
