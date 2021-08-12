@@ -1,6 +1,11 @@
 # Train
 guide: https://tts.readthedocs.io/en/latest/tutorial_for_nervous_beginners.html
 
+## Create stats file
+```
+python TTS/bin/compute_statistics.py MyFileAndConfig/config_maillabs_tacotron2.json scale_stats_maillabs.npy --data_path /media/mint/Barracuda/Datasets/MAIL_LABS_TTS/riccardo_fasol/wavs
+```
+
 ## train vocoder
 ```
 python TTS/bin/train_vocoder_gan.py --config_path MyFileAndConfig/config_maillabs_melgan.json
