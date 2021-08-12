@@ -23,3 +23,10 @@ tts-server --model_path  out_maillabs/maillabs_best-June-30-2021_08+17AM-12c3cb9
            --vocoder_path out_maillabs/melgan-fasol-August-11-2021_09+55AM-12c3cb9d/checkpoint_30000.pth.tar \
            --vocoder_config_path MyFileAndConfig/config_maillabs_melgan.json
 ```
+or without install
+```
+python -m TTS.server.server --model_path  out_maillabs/glow_tts-fasol-August-11-2021_09+21PM-a79eba45/checkpoint_1000.pth.tar \
+                            --config_path MyFileAndConfig/config_maillabs_other.json \
+                            --vocoder_path out_maillabs/melgan-fasol-August-11-2021_09+55AM-12c3cb9d/checkpoint_30000.pth.tar \
+                            --vocoder_config_path MyFileAndConfig/config_maillabs_melgan.json
+```
